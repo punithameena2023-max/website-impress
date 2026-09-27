@@ -1,0 +1,1015 @@
+/* ================================ */
+/* RESET */
+/* ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================ */
+/* BODY */
+/* ================================ */
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #f8e8ff,
+            #ffe8ef
+        );
+
+    color: #4a3540;
+
+    overflow-x: hidden;
+}
+
+
+/* ================================ */
+/* PAGE */
+/* ================================ */
+
+.page {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding:
+        30px
+        20px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.page.active {
+
+    display: flex;
+
+    animation:
+        pageIn
+        0.7s
+        ease;
+}
+
+
+/* ================================ */
+/* GLASS CARD */
+/* ================================ */
+
+.glass-card {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.72
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.8
+        );
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(
+            120,
+            70,
+            100,
+            0.15
+        );
+
+    backdrop-filter:
+        blur(15px);
+
+}
+
+
+/* ================================ */
+/* TEXT */
+/* ================================ */
+
+.tiny-text {
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+
+    opacity: 0.7;
+}
+
+
+.step {
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+
+    color: #a65379;
+}
+
+
+h1 {
+
+    font-size: 46px;
+
+    margin-bottom: 20px;
+
+    color: #a65379;
+}
+
+
+h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 18px;
+
+    color: #70445a;
+}
+
+
+.intro,
+.question-text,
+.surprise-text,
+.memory-text,
+.final-text,
+.ending {
+
+    line-height: 1.8;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================================ */
+/* BUTTON */
+/* ================================ */
+
+button {
+
+    border: none;
+
+    outline: none;
+
+    padding:
+        14px
+        25px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d96b9b,
+            #b95782
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            180,
+            80,
+            120,
+            0.25
+        );
+}
+
+
+/* ================================ */
+/* DATE INPUT */
+/* ================================ */
+
+input[type="date"] {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 300px;
+
+    margin:
+        25px
+        auto;
+
+    padding: 14px;
+
+    border:
+        1px solid
+        #e5bfd0;
+
+    border-radius: 15px;
+
+    background: white;
+
+    color: #70445a;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+input[type="date"]:focus {
+
+    border-color:
+        #c96691;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            201,
+            102,
+            145,
+            0.12
+        );
+}
+
+
+/* ================================ */
+/* MESSAGE */
+/* ================================ */
+
+.message {
+
+    min-height: 25px;
+
+    margin-top: 18px;
+
+    font-weight: 600;
+
+    color: #a65379;
+}
+
+
+/* ================================ */
+/* VIDEO */
+/* ================================ */
+
+.video-box {
+
+    width: 100%;
+
+    margin:
+        25px
+        auto;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #1f1720;
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.15
+        );
+}
+
+
+.video-box video {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 450px;
+
+    object-fit: contain;
+}
+
+
+/* ================================ */
+/* MINI HEART */
+/* ================================ */
+
+.mini-heart {
+
+    font-size: 70px;
+
+    margin: 25px 0;
+
+    animation:
+        float 2s
+        ease-in-out
+        infinite;
+}
+
+
+/* ================================ */
+/* GIFT */
+/* ================================ */
+
+.gift-box {
+
+    margin:
+        30px
+        auto;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(
+            255,
+            230,
+            240,
+            0.7
+        );
+}
+
+
+.gift-icon {
+
+    font-size: 80px;
+
+    margin-bottom: 20px;
+
+    animation:
+        float 2s
+        ease-in-out
+        infinite;
+}
+
+
+/* ================================ */
+/* THREE LITTLE SURPRISE BOXES */
+/* ================================ */
+
+.memory-cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin:
+        32px
+        0;
+
+    width: 100%;
+}
+
+
+.memory-card {
+
+    position: relative;
+
+    padding:
+        28px
+        18px;
+
+    min-height: 190px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.9),
+            rgba(255,240,247,0.78)
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.95
+        );
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            150,
+            80,
+            120,
+            0.12
+        );
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* Soft shine */
+
+.memory-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -70px;
+
+    right: -70px;
+
+    width: 130px;
+
+    height: 130px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+/* Hover */
+
+.memory-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 20px 40px
+        rgba(
+            150,
+            80,
+            120,
+            0.2
+        );
+
+    border-color:
+        rgba(
+            217,
+            107,
+            155,
+            0.35
+        );
+}
+
+
+.memory-card:hover::before {
+
+    transform:
+        scale(1.4);
+}
+
+
+/* Icons */
+
+.memory-icon {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe4ef,
+            #f7ddff
+        );
+
+    font-size: 31px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            180,
+            80,
+            130,
+            0.12
+        );
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.memory-card:hover .memory-icon {
+
+    transform:
+        scale(1.12)
+        rotate(-4deg);
+}
+
+
+/* Titles */
+
+.memory-card h3 {
+
+    position: relative;
+
+    z-index: 1;
+
+    font-size: 17px;
+
+    color: #70445a;
+
+    margin-bottom: 10px;
+}
+
+
+/* Description */
+
+.memory-card p {
+
+    position: relative;
+
+    z-index: 1;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #80606e;
+
+    margin: 0;
+}
+
+
+/* ================================ */
+/* OPTIONS */
+/* ================================ */
+
+.options {
+
+    display: grid;
+
+    gap: 14px;
+
+    margin-top: 25px;
+}
+
+
+.options button {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.9
+        );
+
+    color: #70445a;
+
+    border:
+        1px solid
+        #edcada;
+}
+
+
+.options button:hover {
+
+    background:
+        #ffe7f0;
+}
+
+
+/* ================================ */
+/* LETTER */
+/* ================================ */
+
+.letter {
+
+    text-align: left;
+
+    line-height: 1.9;
+
+    margin:
+        25px
+        0;
+}
+
+
+.letter p {
+
+    margin-bottom: 18px;
+}
+
+
+.highlight {
+
+    padding: 20px;
+
+    border-left:
+        4px solid
+        #d96b9b;
+
+    background:
+        rgba(
+            255,
+            230,
+            240,
+            0.6
+        );
+
+    border-radius: 10px;
+}
+
+
+/* ================================ */
+/* FINAL */
+/* ================================ */
+
+.final-card {
+
+    max-width: 700px;
+}
+
+
+.birthday-icon {
+
+    font-size: 65px;
+
+    margin-bottom: 15px;
+}
+
+
+.final-card h1 {
+
+    font-size: 55px;
+
+    letter-spacing: 3px;
+}
+
+
+.final-card h2 {
+
+    margin-bottom: 25px;
+}
+
+
+.cake {
+
+    font-size: 85px;
+
+    margin: 25px 0;
+
+    animation:
+        float 2s
+        ease-in-out
+        infinite;
+}
+
+
+#celebration {
+
+    margin-top: 25px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #a65379;
+}
+
+
+/* ================================ */
+/* FLOATING HEARTS */
+/* ================================ */
+
+.hearts {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+
+.hearts span {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    font-size: 25px;
+
+    opacity: 0.35;
+
+    animation:
+        heartFloat
+        8s
+        linear
+        infinite;
+}
+
+
+.hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+
+.hearts span:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+
+.hearts span:nth-child(3) {
+    left: 55%;
+    animation-delay: 4s;
+}
+
+
+.hearts span:nth-child(4) {
+    left: 75%;
+    animation-delay: 1s;
+}
+
+
+.hearts span:nth-child(5) {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+
+/* ================================ */
+/* ANIMATIONS */
+/* ================================ */
+
+@keyframes pageIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes heartFloat {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.35;
+    }
+
+    to {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px);
+    }
+}
+
+
+/* ================================ */
+/* MOBILE */
+/* ================================ */
+
+@media (max-width: 600px) {
+
+    .page {
+
+        padding:
+            20px
+            12px;
+    }
+
+
+    .glass-card {
+
+        padding:
+            32px
+            20px;
+
+        border-radius: 24px;
+    }
+
+
+    h1 {
+
+        font-size: 35px;
+    }
+
+
+    h2 {
+
+        font-size: 24px;
+    }
+
+
+    .final-card h1 {
+
+        font-size: 38px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .intro,
+    .question-text,
+    .surprise-text,
+    .memory-text,
+    .final-text,
+    .ending {
+
+        font-size: 15px;
+    }
+
+
+    button {
+
+        width: 100%;
+
+        max-width: 320px;
+    }
+
+
+    /* 3 boxes → one by one on phone */
+
+    .memory-cards {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin:
+            28px
+            0;
+    }
+
+
+    .memory-card {
+
+        min-height: 165px;
+
+        padding:
+            24px
+            18px;
+    }
+
+}
+/* ================================ */
+/* MEMORY PHOTO */
+/* ================================ */
+
+.memory-photo-card {
+    padding: 18px;
+}
+
+.memory-photo {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+    margin-bottom: 16px;
+
+    box-shadow:
+        0 8px 22px
+        rgba(150, 80, 120, 0.15);
+
+    transition:
+        transform 0.4s ease;
+}
+
+.memory-photo-card:hover .memory-photo {
+    transform: scale(1.03);
+}

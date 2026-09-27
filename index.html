@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Birthday Journey ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="bgMusic" loop>
+    <source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+    <!-- Floating Hearts -->
+    <div class="hearts">
+        <span>❤️</span>
+        <span>♡</span>
+        <span>💗</span>
+        <span>💕</span>
+        <span>♡</span>
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- WELCOME -->
+    <!-- ========================= -->
+
+    <section id="welcome" class="page active">
+
+        <div class="glass-card welcome-card">
+
+            <p class="tiny-text">
+                A little surprise awaits...
+            </p>
+
+            <h1>
+                Hey Birthday Boy ❤️
+            </h1>
+
+            <p class="intro">
+                I made something a little different for you.
+                <br>
+                But you have to unlock it
+                one step at a time. ✨
+            </p>
+
+            <button onclick="startJourney()">
+                Start the Journey ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- PROPOSE DATE -->
+    <!-- ========================= -->
+
+    <section id="question1" class="page">
+
+        <div class="glass-card">
+
+            <p class="step">
+                A LITTLE MEMORY 💌
+            </p>
+
+            <h2>
+                Enter Our Propose Date ❤️
+            </h2>
+
+            <p class="question-text">
+                Let's see if you remember
+                the date where our little story began... ✨
+            </p>
+
+            <input
+                type="date"
+                id="date1"
+            >
+
+            <button onclick="checkDate1()">
+                Unlock the Surprise 💗
+            </button>
+
+            <p
+                id="message1"
+                class="message">
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- BETWEEN SURPRISE -->
+    <!-- ========================= -->
+
+    <section id="betweenSurprise" class="page">
+
+        <div class="glass-card">
+
+            <p class="step">
+                ONE LITTLE THING 💗
+            </p>
+
+            <h2>
+                One date was just the beginning... ❤️
+            </h2>
+
+            <p class="surprise-text">
+                But there's another date that means
+                something special. ✨
+            </p>
+
+            <div class="mini-heart">
+                ❤️
+            </div>
+
+            <p class="memory-text">
+                Ready for the next one? 👀
+            </p>
+
+            <button onclick="nextPage('question2')">
+                Continue 💕
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- FAVORITE DATE -->
+    <!-- ========================= -->
+
+    <section id="question2" class="page">
+
+        <div class="glass-card">
+
+            <p class="step">
+                ANOTHER SPECIAL DATE ⭐
+            </p>
+
+            <h2>
+                Enter Our Favorite Date ❤️
+            </h2>
+
+            <p class="question-text">
+                Okay... let's see if you remember
+                this one too. 👀
+            </p>
+
+            <input
+                type="date"
+                id="date2"
+            >
+
+            <button onclick="checkDate2()">
+                Unlock This One 💗
+            </button>
+
+            <p
+                id="message2"
+                class="message">
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- LITTLE SURPRISE -->
+    <!-- ========================= -->
+
+    <section id="littleSurprise" class="page">
+
+        <div class="glass-card surprise-card">
+
+            <p class="step">
+                A LITTLE SURPRISE 🎁
+            </p>
+
+            <h2>
+                Three Little Things... ❤️
+            </h2>
+
+            <p class="surprise-text">
+                Since you remembered the date,
+                you unlocked three little surprises. ✨
+            </p>
+
+            <div class="memory-cards">
+
+                <div class="memory-card memory-photo-card">
+
+    <img
+        src="photos/memory.jpg"
+        alt="A special memory"
+        class="memory-photo"
+    >
+
+    <h3>A Memory ❤️</h3>
+
+    <p>
+        Some moments are simple,
+        but they become special memories. ✨
+    </p>
+
+</div>
+
+                <div class="memory-card">
+    <div class="memory-icon">💌</div>
+
+    <h3>A Little Message ❤️</h3>
+
+    <p>
+        I’ll always be there with you,
+        with the same love and the same care.
+        I want to stay by your side until the very end.
+        I wish to see you achieve all your dreams
+        and succeed in everything you do.
+        I’ll always be proud to see you grow
+        and reach your goals.
+        I love you so much. ❤️✨
+    </p>
+</div>
+
+
+                <div class="memory-card">
+
+                    <div class="memory-icon">
+                        ⭐
+                    </div>
+
+                    <h3>
+                        A Clue
+                    </h3>
+
+                    <p>
+                        One more surprise is waiting...
+                        but you have to continue. 👀
+                    </p>
+
+                </div>
+
+            </div>
+
+            <button onclick="nextPage('question3')">
+                Continue the Journey ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- HOW WELL DO YOU KNOW ME -->
+    <!-- ========================= -->
+
+    <section id="question3" class="page">
+
+        <div class="glass-card">
+
+            <p class="step">
+                ONE LAST TEST 👀
+            </p>
+
+            <h2>
+                How well do you know me? ❤️
+            </h2>
+
+            <p class="question-text">
+                What do you think I enjoy the most?
+            </p>
+
+            <div class="options">
+
+                <button onclick="correctAnswer()">
+                    ❤️ Spending time with you
+                </button>
+
+                <button onclick="wrongAnswer()">
+                    🍕 Going out to eat
+                </button>
+
+                <button onclick="wrongAnswer()">
+                    🎵 Listening to my favorite songs
+                </button>
+
+                <button onclick="wrongAnswer()">
+                    📞 Talking with you on the phone
+                </button>
+
+            </div>
+
+            <p
+                id="message3"
+                class="message">
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- FINAL LETTER -->
+    <!-- ========================= -->
+
+    <section id="letter" class="page">
+
+        <div class="glass-card letter-card">
+
+            <p class="step">
+                A LITTLE LETTER 💌
+            </p>
+
+            <h2>
+                For You... ❤️
+            </h2>
+
+            <div class="letter-content">
+
+                <p>
+                    Some moments are impossible to forget.
+                </p>
+
+                <p>
+                    Some dates become special because of
+                    the memories connected to them. ✨
+                </p>
+
+                <p>
+                    And this little journey was just a small
+                    way to remind you of those moments. ❤️
+                </p>
+
+                <p>
+                    I hope this birthday brings you lots of
+                    happiness, smiles and beautiful memories.
+                </p>
+
+                <p class="letter-ending">
+                    Keep smiling and keep being you. ❤️
+                </p>
+
+            </div>
+
+            <button onclick="nextPage('videoSurprise')">
+                One Last Thing... 🎬
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- LAST VIDEO SURPRISE -->
+    <!-- ========================= -->
+
+    <section id="videoSurprise" class="page">
+
+        <div class="glass-card surprise-card">
+
+            <p class="step">
+                ONE LAST MEMORY ❤️
+            </p>
+
+            <h2>
+                One Last Surprise... 🎬
+            </h2>
+
+            <p class="surprise-text">
+                Before the final birthday reveal,
+                here's one last little memory. ✨
+            </p>
+
+            <div class="video-box">
+
+                <video
+                    id="memoryVideo"
+                    controls
+                    playsinline
+                >
+
+                    <source
+                        src="videos/propose.mp4"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support video.
+
+                </video>
+
+            </div>
+
+            <p class="memory-text">
+                And now... one last thing. ❤️
+            </p>
+
+            <button onclick="nextPage('final')">
+                Continue to Your Birthday 🎂
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- FINAL BIRTHDAY -->
+    <!-- ========================= -->
+
+    <section id="final" class="page">
+
+        <div class="glass-card final-card">
+
+            <p class="step">
+                THE END OF THE JOURNEY ✨
+            </p>
+
+            <h1>
+                HAPPY BIRTHDAY
+            </h1>
+
+            <h2>
+                Birthday Boy ❤️
+            </h2>
+
+            <p class="final-message">
+                Hope your day is filled with
+                happiness, laughter and beautiful memories. 🎂✨
+            </p>
+
+            <button onclick="celebrate()">
+                Make a Wish ✨
+            </button>
+
+            <p
+                id="celebration"
+                class="celebration">
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
